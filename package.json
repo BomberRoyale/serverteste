@@ -1,0 +1,18 @@
+{
+"name": "chimerical-palmier-1c9c6c",
+"version": "0.0.1",
+"description": "",
+"main": "server.js",
+  "dependencies": {
+    "express": "^4.18.2",
+    "shortid": "^2.2.16",
+    "socketio": "^1.0.0"
+  },
+  "devDependencies":{},
+  "scripts":{
+    "test":"echo \"Error: no test specified\" && exist 1",
+    "start": "src\node server.js"
+  },
+  "author": "JJLGames",
+  "license": "MIT"
+}
