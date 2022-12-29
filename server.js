@@ -1,7 +1,8 @@
-var express = require('express');
-var app = express();
-var http = require ('http').Server(app);
-var io = require('socket.io')(http);
+const express = require('express');
+const app = express();
+const server = require ("http").Server(app);
+const io = require('socket.io')(server);
+const port = process.env.PORT || 3000;
 
 var shortId = require('shortid');
 app.use(express.static(__dirname));
@@ -19,7 +20,7 @@ io.on('connection', function(socket){
 	});
 });
 
-http.listen(process.env.PORT || 3000, function(){
+server.listen(port, function(){
 	console.log('listening on *:3000');
 });
 console.log("-------- rodou--------");
